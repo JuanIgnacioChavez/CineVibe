@@ -8,7 +8,6 @@ Características principales ✨
 Para Administradores
 
 CRUD completo:
-
 Gestión de películas, funciones y aperitivos de manera sencilla y eficiente.
 Control de ventas:
 Visualización y administración de todas las transacciones realizadas.
