@@ -1,0 +1,418 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Jost", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #1a1a1a; /* Fondo gris oscuro para todo el cuerpo */
+    color: #FFFFFF; /* Texto principal blanco */
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 5%; /* Reducido el padding superior e inferior */
+    background-color: #000000; /* Fondo negro para el header */
+}
+
+.logo img {
+    max-width: 110px; /* Reducido el tamaño máximo del logo */
+    height: auto;
+}
+
+.navmenu {
+    display: flex;
+}
+
+.navmenu a {
+    color: #FFFFFF; /* Texto del menú en blanco */
+    font-size: 20px; /* Reducido el tamaño de la fuente */
+    text-transform: capitalize;
+    padding: 8px 15px; /* Reducido el padding en los enlaces */
+    font-weight: 400;
+    transition: all .42s ease;
+}
+
+.navmenu a:hover {
+    color: #FFCC00; /* Texto del menú en amarillo al pasar el cursor */
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon i {
+    margin-right: 15px; /* Reducido el margen derecho */
+    color: #DAA520; /* Iconos en dorado */
+    font-size: 25px; /* Reducido el tamaño de los iconos */
+    font-weight: 400;
+    transition: all .42s ease;
+}
+
+.nav-icon i:hover {
+    transform: scale(1.1);
+    color: #FFCC00; /* Color amarillo al pasar el cursor */
+}
+
+#menu-icon {
+    font-size: 100px; /* Reducido el tamaño del icono del menú */
+    color: #E50914; /* Color rojo oscuro para el icono del menú */
+    z-index: 10001;
+    cursor: pointer;
+}
+
+#menu-icon:hover {
+    color: #FFCC00; /* Cambia a amarillo cuando se pasa el cursor */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #333;
+    color: #f5af19;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #444;
+}
+
+/* MAIN SECTION */
+
+section {
+    padding: 5% 10%;
+    background-color: #000000; /* Asegura que cada sección tenga fondo negro */
+}
+
+.main-home {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/pngs/fondo main.png');
+    background-position: right;
+    background-size: 45%; /* Ajusta el tamaño al 45% del contenedor */
+    background-repeat: no-repeat;
+    display: grid;
+    align-items: center;
+}
+
+
+
+.main-text h5 {
+    color: #FFFFFF;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.main-text h1 {
+    color: #FFCC00;
+    font-size: 65px;
+    text-transform: capitalize;
+    line-height: 1.1;
+    font-weight: 600;
+    margin: 6px 0 10px;
+}
+
+.main-text p {
+    color: #E50914;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.main-btn {
+    display: inline-block;
+    color: #DAA520;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #FFFFFF;
+    padding: 12px 25px;
+    transition: all .42s ease;
+}
+
+.main-btn:hover {
+    background-color: #DAA520;
+    color: #fff;
+}
+
+.main-btn i {
+    vertical-align: middle;
+}
+
+header.sticky {
+    background: #000000; /* Asegura que el header pegajoso también sea negro */
+    padding: 20px 10%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+/* CARTELERA SECTION */
+
+.center-text h2 {
+    color: #DAA520; /* Color dorado para el título de la sección */
+    font-size: 28px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cartelera {
+    padding: 5% 10%; /* Espaciado de la sección */
+    background-color: #000000; /* Fondo oscuro para la sección de cartelera */
+}
+
+.peliculas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las películas en la sección */
+    gap: 20px; /* Espacio entre las tarjetas de las películas */
+}
+
+.pelicula {
+    background-color: #333; /* Fondo de la tarjeta de película */
+    border-radius: 10px; /* Bordes redondeados */
+    border-color: #E50914;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    width: 300px; /* Ancho de las tarjetas de película */
+    height: 500px; /* Altura fija de las tarjetas de película */
+    text-align: center; /* Centra el texto dentro de las tarjetas */
+    padding: 15px; /* Espaciado interno */
+    color: #FFFFFF; /* Color del texto dentro de las tarjetas */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido de la tarjeta de arriba hacia abajo */
+    justify-content: space-between; /* Asegura que los elementos se distribuyan adecuadamente */
+}
+
+.pelicula img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio sin distorsionarla */
+    border-bottom: 2px solid #DAA520; /* Línea dorada debajo de la imagen */
+    margin-bottom: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.pelicula h3 {
+    color: #DAA520; /* Título en dorado */
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.pelicula p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #FFFFFF; /* Asegura que el texto de las descripciones sea blanco */
+    flex-grow: 1; /* Asegura que el texto ocupe el espacio restante si es necesario */
+}
+
+.pelicula p strong {
+    color: #FFCC00; /* Color dorado para las etiquetas */
+}
+
+.pelicula:hover {
+    transform: scale(0.93);
+}
+
+/* CONTACTO SECTION */
+
+.left-text h2 {
+    color: #DAA520; /* Color dorado para el título de la sección */
+    font-size: 28px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mapa {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mapa iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+/* Estilos para dispositivos pequeños (teléfonos móviles) */
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 3%;
+    }
+
+    .logo img {
+        max-width: 70px;
+    }
+
+    .navmenu a {
+        font-size: 15px;
+        padding: 6px 8px;
+    }
+
+    .main-text h1 {
+        font-size: 32px;
+    }
+
+    .main-text p {
+        font-size: 14px;
+    }
+
+    .main-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    /* Ajustes para las tarjetas de películas más anchas */
+    .peliculas {
+        flex-direction: column;
+        gap: 15px; /* Aumentamos el espacio entre las películas */
+    }
+
+    .pelicula {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 95%; /* Aumenta el ancho de las tarjetas */
+        margin: 0 auto; /* Centramos las tarjetas */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pelicula img {
+        width: 100%; /* La imagen se adapta al ancho de la tarjeta */
+        max-height: 280px; /* Ajusta la altura para que no se vea muy alta */
+        object-fit: cover; /* Asegura que la imagen mantenga proporciones y se vea bien */
+    }
+
+    .pelicula-info {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Ajustes de mapa */
+    .mapa iframe {
+        height: 280px;
+    }
+}
+
+
+
+/* Estilos para tablets (pantallas medianas) */
+@media only screen and (max-width: 1024px) {
+    header {
+        padding: 6px 4%; /* Ajustamos el padding */
+    }
+
+    .main-text h1 {
+        font-size: 48px; /* Disminuimos el tamaño del título para tablets */
+    }
+
+    .main-text p {
+        font-size: 18px; /* Texto ligeramente más pequeño */
+    }
+
+    .main-btn {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+
+    .peliculas {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .pelicula {
+        width: 45%; /* Dos tarjetas de películas por fila en tablets */
+    }
+
+    .pelicula img {
+        height: 300px; /* Tamaño intermedio para las imágenes */
+    }
+
+    .mapa iframe {
+        height: 350px; /* Altura del mapa ajustada para tablets */
+    }
+}
+
+/* Estilos para pantallas portátiles y mayores (laptops, desktops) */
+@media only screen and (min-width: 1025px) {
+    header {
+        padding: 6px 5%; /* El padding en pantallas grandes permanece igual */
+    }
+
+    .main-home {
+        background-position: right;
+        background-size: 35%;
+    }
+
+    .main-text h1 {
+        font-size: 75px; /* Tamaño original */
+    }
+
+    .main-btn {
+        padding: 12px 25px; /* Padding original */
+    }
+
+    .pelicula {
+        width: 300px; /* Mantiene el tamaño original de las tarjetas de películas */
+    }
+
+    .pelicula img {
+        height: 400px; /* Tamaño original de las imágenes */
+    }
+
+    .mapa iframe {
+        height: 450px; /* Altura original del mapa */
+    }
+}

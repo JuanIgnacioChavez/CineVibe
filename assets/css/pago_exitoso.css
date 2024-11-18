@@ -1,0 +1,51 @@
+body {
+    background-color: #1a1a1a;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.message-container {
+    font-family: "Jost", sans-serif;
+    background-color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Estilo para la imagen del logo */
+.message-container img {
+    max-width: 150px; /* Ajusta el tamaño del logo */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+.message-container h1 {
+    font-size: 45px;
+    color: #FFCC00;
+    margin-bottom: 20px;
+}
+
+.message-container p {
+    font-size: 20px;
+    color: #E50914;
+    margin-bottom: 30px;
+}
+
+.redirect-text {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.redirect-text a {
+    color: #FFCC00;
+    text-decoration: none;
+}
+
+.redirect-text a:hover {
+    text-decoration: underline;
+}

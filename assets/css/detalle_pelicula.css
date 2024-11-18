@@ -1,0 +1,626 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Jost", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5%; /* Reducido el padding superior e inferior */
+    background-color: #000000; /* Fondo negro para el header */
+}
+
+.logo img {
+    max-width: 110px; /* Reducido el tamaño máximo del logo */
+    height: auto;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon i {
+    margin-right: 15px; /* Reducido el margen derecho */
+    color: #DAA520; /* Iconos en dorado */
+    font-size: 25px; /* Reducido el tamaño de los iconos */
+    font-weight: 400;
+    transition: all .42s ease;
+}
+
+.nav-icon i:hover {
+    transform: scale(1.1);
+    color: #FFCC00; /* Color amarillo al pasar el cursor */
+}
+
+#menu-icon {
+    font-size: 100px; /* Reducido el tamaño del icono del menú */
+    color: #E50914; /* Color rojo oscuro para el icono del menú */
+    z-index: 10001;
+    cursor: pointer;
+}
+
+#menu-icon:hover {
+    color: #FFCC00; /* Cambia a amarillo cuando se pasa el cursor */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #333;
+    color: #f5af19;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #444;
+}
+
+/* MAIN SECTION */
+
+section {
+    padding: 3% 5%; /* Reducido el padding */
+    background-color: #000000; /* Asegura que cada sección tenga fondo negro */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 10px;
+}
+
+.poster {
+    flex: 1;
+    max-width: 400px;
+    margin-right: 20px;
+    margin-top: 25px;
+}
+
+.poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+}
+
+.details {
+    flex: 2;
+    min-width: 300px;
+}
+
+.details h1 {
+    color: #DAA520;
+    font-size: 75px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.details p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.details .label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #DAA520;
+}
+
+/* TRAILER SECTION */
+
+.trailer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.trailer h2 {
+    font-size: 2.5rem;
+    color: #DAA520;
+    margin-bottom: 20px;
+}
+
+.trailer iframe {
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* HORARIOS SECTION */
+
+.showtimes {
+    margin: 20px auto;
+    text-align: center;
+}
+.showtimes h2{
+    text-align: center;
+    align-items: center;
+}
+
+.showtimes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.showtimes-table th, .showtimes-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.showtimes-table th {
+    background-color: #333;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.showtimes-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.showtimes-table .details {
+    display: none;
+}
+
+.showtimes-table .details.open {
+    display: table-row;
+}
+
+.toggle-details {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.toggle-details:hover {
+    color: #0056b3;
+}
+
+.showtimes .reservation-details {
+    margin-top: 20px;
+}
+
+.showtimes .reservation-details label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.showtimes .reservation-details input,
+.showtimes .reservation-details select {
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+.showtimes .reservation-details button {
+    background-color: #DAA520;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.showtimes .reservation-details button:hover {
+    background-color: #FFCC00;
+}
+
+/* Sección de Asientos */
+.seating {
+    padding: 20px;
+    border-top: 2px solid #ddd;
+}
+
+.seat.available {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.seat.unavailable {
+    background-color: #f44336;
+    color: white;
+}
+
+.seat.selected {
+    background-color: #2196F3;
+}
+
+
+/* Sección de Asientos */
+.seats {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr); /* Muestra 15 asientos por fila */
+    gap: 5px; /* Espacio entre asientos */
+    padding: 10px;
+}
+
+/* Estilo para cada asiento */
+.seat {
+    width: 45px; /* Aumenté el ancho del asiento */
+    height: 45px; /* Aumenté la altura del asiento */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1em; /* Ajusté el tamaño de la fuente */
+    background-color: #4CAF50; /* Asiento disponible */
+    cursor: pointer;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadí sombra para darle más profundidad */
+    transition: background-color 0.3s, transform 0.3s; /* Animación al cambiar color */
+}
+
+.seat:hover {
+    transform: scale(1.1); /* Efecto de agrandar el asiento al pasar el ratón */
+    background-color: #66BB6A; /* Color más claro al hacer hover */
+}
+
+/* Asiento no disponible */
+.seat.unavailable {
+    background-color: #FF4D4D; /* Rojo para asiento no disponible */
+    cursor: not-allowed; /* Desactiva el cursor sobre el asiento no disponible */
+    box-shadow: none; /* Sin sombra para los asientos no disponibles */
+}
+
+/* Asiento seleccionado */
+.seat.selected {
+    background-color: #FFD700; /* Color dorado para asiento seleccionado */
+    transform: scale(1.1); /* Efecto de agrandar el asiento seleccionado */
+}
+
+/* Pantalla de cine */
+.screen {
+    text-align: center;
+    margin-bottom: 20px; /* Aumenté el espacio debajo de la pantalla */
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 20px; /* Añadí un poco más de padding */
+    border-radius: 10px; /* Bordes más redondeados */
+    margin-top: 40px; /* Añadí espacio adicional para que se vea mejor */
+}
+
+/* Responsive Design para la sección de asientos */
+@media screen and (max-width: 1024px) {
+    .seats {
+        grid-template-columns: repeat(8, 1fr); /* Menos columnas en pantallas más pequeñas */
+    }
+
+    .seat {
+        width: 35px; /* Reduje el tamaño de los asientos para pantallas pequeñas */
+        height: 35px;
+        font-size: 0.9em; /* Ajusté el tamaño de la fuente */
+    }
+}
+
+/* SnackMenu Section */
+
+.snack-menu {
+    text-align: center;
+    background-color: #1a1a1a; /* Color de fondo oscuro */
+    padding: 20px;
+    color: white;
+}
+
+.snack-items {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajuste automático de columnas */
+    gap: 20px; /* Espacio entre los items */
+}
+
+.snack-item {
+    background-color: #333; /* Color de fondo de cada aperitivo */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px;
+    transition: transform 0.3s; /* Efecto de animación al pasar el ratón */
+}
+
+.snack-item:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+.snack-item img {
+    width: 100%; /* Ajuste de la imagen al 100% del contenedor */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior */
+}
+
+.price {
+    font-size: 1.2em; /* Tamaño de fuente para el precio */
+    color: #ffa500; /* Color dorado para el precio */
+}
+
+button {
+    background-color: #ff9900; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffcc00; /* Color del botón al pasar el ratón */
+}
+
+/* Carrito Section */
+
+.cart {
+    background-color: #333; /* Color de fondo oscuro */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Más sombra para resaltar */
+}
+
+.cart h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #DAA520; /* Color dorado para el encabezado */
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 12px;
+    text-align: left;
+}
+
+.cart-table th {
+    background-color: #444; /* Color del encabezado más oscuro */
+    color: #DAA520; /* Color dorado para el texto del encabezado */
+}
+
+.cart-table tr:nth-child(even) {
+    background-color: #555; /* Color alternativo para las filas */
+}
+
+#total-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #DAA520; /* Color dorado para el total */
+}
+
+.checkout-btn {
+    align-items: center;
+    background-color: #DAA520; /* Color dorado para el botón */
+    color: #000; /* Texto negro para mejor contraste */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkout-btn:hover {
+    background-color: #FFCC00; /* Color más brillante al pasar el mouse */
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1200px) {
+    /* Ajustes para laptops más grandes */
+    .container {
+        padding: 0 5%;
+    }
+
+    .details h1 {
+        font-size: 65px;
+    }
+
+    .trailer iframe {
+        height: 400px;
+    }
+
+    .snack-items {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .cart h2 {
+        font-size: 22px;
+    }
+
+    .cart-table th, .cart-table td {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /* Ajustes para laptops pequeñas y tablets en posición horizontal */
+    .container {
+        flex-direction: column;
+        padding: 0 3%;
+    }
+
+    .poster {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .details h1 {
+        font-size: 60px;
+    }
+
+    .trailer iframe {
+        height: 350px;
+    }
+
+    .seats {
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+    .seat {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    .snack-items {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .cart h2 {
+        font-size: 20px;
+    }
+
+    .cart-table th, .cart-table td {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Ajustes para tablets en posición vertical */
+    header {
+        padding: 0px 3%;
+    }
+
+    .logo img {
+        max-width: 90px;
+    }
+
+    .nav-icon i {
+        font-size: 20px;
+    }
+
+    #menu-icon {
+        font-size: 60px;
+    }
+
+    .details h1 {
+        font-size: 50px;
+    }
+
+    .trailer iframe {
+        height: 300px;
+    }
+
+    .seats {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .seat {
+        width: 18px;
+        height: 18px;
+        font-size: 8px;
+    }
+
+    .snack-items {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .cart-table th, .cart-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustes para teléfonos */
+    header {
+        padding: 0px 2%;
+    }
+
+    .logo img {
+        max-width: 70px;
+    }
+
+    .nav-icon i {
+        font-size: 18px;
+    }
+
+    #menu-icon {
+        font-size: 50px;
+    }
+
+    .details h1 {
+        font-size: 35px;
+    }
+
+    .details p {
+        font-size: 1em;
+    }
+
+    .trailer iframe {
+        height: 200px;
+    }
+
+    .seats {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .seat {
+        width: 15px;
+        height: 15px;
+        font-size: 6px;
+    }
+
+    .snack-items {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .cart-table th, .cart-table td {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .checkout-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

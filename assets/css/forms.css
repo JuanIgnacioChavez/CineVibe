@@ -1,0 +1,301 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffd700; /* Letras doradas */
+}
+
+header {
+    background-color: #222222; /* Fondo oscuro para el header */
+    color: #ffd700; /* Letras doradas */
+    padding: 1rem;
+    text-align: center;
+    align-content: center;
+}
+
+/* Menú Lateral */
+.sidebar {
+    background-color: #111; /* Fondo oscuro */
+    color: #ffd700; /* Texto dorado */
+    width: 250px;
+    height: 100vh; /* Altura completa de la ventana */
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ffd700; /* Texto dorado */
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #222; /* Fondo oscuro al pasar el ratón */
+}
+
+.wrapper {
+    display: flex;
+    margin-left: 250px; /* Ajustar contenido para dejar espacio para la barra lateral */
+}
+
+main {
+    max-width: 1250px; /* Ajusta según el ancho deseado */
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    color: #ffd700;
+}
+
+.btn {
+    text-decoration: none;
+    align-items: center;
+    padding: 12px;
+    background: #f5af19;
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Borde más redondeado */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+    font-weight: bold; /* Texto en negrita para mayor impacto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    margin-top: 10px; /* Espacio entre este botón y el que está encima */
+}
+
+.btn:hover {
+    background-color: #ffcc00; /* Fondo dorado más claro al pasar el cursor */
+    transform: scale(1.05); /* Aumentar tamaño al pasar el cursor */
+}
+
+
+/* Títulos */
+h2 {
+    margin-top: 0;
+    color: #ffd700; /* Letras doradas */
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+label {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #ffd700; /* Letras doradas */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+input[type="file"] {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid #333; /* Borde oscuro */
+    border-radius: 4px;
+    background-color: #222222; /* Fondo oscuro para los campos de entrada */
+    color: #ffd700; /* Letras doradas */
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+    border-color: #ffd700; /* Borde dorado al enfocar */
+    background-color: #333333; /* Fondo oscuro al enfocar */
+}
+
+input[type="submit"],
+button {
+    margin-top: 1rem;
+    margin-bottom: 1rem; /* Añadir separación abajo */
+    padding: 0.75rem;
+    background: #f5af19;
+    color: white; /* Letras negras */
+    font-weight: bold; /* Texto en negrita para mayor impacto */
+    border: none;
+    border-radius: 8px; /* Borde más redondeado */
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%; /* Ajustar al 100% del contenedor */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #ffcc00; /* Fondo dorado más claro al pasar el cursor */
+    transform: scale(1.05); /* Aumentar tamaño al pasar el cursor *//
+}
+
+/* Alertas */
+.alert,
+.error {
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #444; /* Borde oscuro */
+    color: #ffd700; /* Letras doradas */
+    background-color: #222222; /* Fondo oscuro */
+    border-radius: 5px;
+    text-align: center;
+}
+
+.alert.success {
+    border-color: #ffd700; /* Borde dorado */
+}
+
+.alert.error {
+    border-color: #ff4d4d; /* Borde rojo para errores */
+}
+
+/* Tabla de Películas */
+.table-container {
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #333; /* Borde oscuro */
+    text-align: left;
+}
+
+th {
+    background-color: #333333; /* Fondo oscuro para los encabezados */
+    color: #ffd700; /* Letras doradas para los encabezados */
+    font-weight: bold;
+}
+
+td {
+    background-color: #1e1e1e; /* Fondo oscuro para las celdas */
+    color: #ffd700; /* Letras doradas para las celdas */
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.actions a, .actions button {
+    padding: 1rem;
+    border-radius: 4px;
+    color: #ffd700;
+    font-size: 0.875rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%; /* Ocupa el 100% de la celda */
+    box-sizing: border-box; /* Evita que el padding afecte el ancho */
+}
+
+.actions a.edit {
+    background-color: #444444; /* Fondo oscuro para editar */
+}
+
+.actions a.edit:hover {
+    background-color: #555555; /* Fondo más claro para editar */
+}
+
+.actions a.delete {
+    background-color: #ff4d4d; /* Fondo rojo para eliminar */
+}
+
+.actions a.delete:hover {
+    background-color: #cc0000; /* Fondo rojo más oscuro para eliminar */
+}
+
+.actions button {
+    background-color: #ffd700; /* Fondo dorado */
+    border: none;
+    color: #000; /* Letras negras */
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #ffcc00; /* Fondo dorado más claro al pasar el cursor */
+}
+
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.pagination a,
+.pagination span {
+    color: #ffd700; /* Texto dorado */
+    background-color: #222; /* Fondo oscuro */
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #333; /* Fondo más claro al pasar el cursor */
+}
+
+.pagination .active {
+    background-color: #ffd700; /* Fondo dorado para el número de página activo */
+    color: #000; /* Texto negro */
+    pointer-events: none; /* Desactivar enlace en el número de página activo */
+    font-weight: bold;
+}
+
+/* Estilos específicos para la barra lateral */
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0;
+    color: #ffd700;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+

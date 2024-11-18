@@ -1,0 +1,252 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffd700; /* Letras doradas */
+}
+
+/* Contenedor Principal */
+main {
+    flex-grow: 1; /* Esto hace que ocupe el espacio restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa la altura completa */
+    margin-left: 250px; /* Deja espacio para el menú lateral */
+    background-color: #000; /* Fondo negro para el main */
+}
+
+/* Estilos del Header */
+header {
+    background-color: #222222; /* Fondo oscuro para el header */
+    color: #ffd700; /* Letras doradas */
+    padding: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar logo y título */
+    justify-content: center;
+}
+
+header .logo {
+    max-width: 150px; /* Ajusta el tamaño del logo */
+    margin-bottom: 1rem; /* Espacio entre logo y título */
+}
+
+h1 {
+    font-size: 2rem; /* Ajusta el tamaño del título */
+    margin: 0;
+}
+
+.bienvenida {
+    font-size: 24px;
+    color: #FFD700; /* Color dorado */
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Menú Lateral */
+.sidebar {
+    background-color: #111; /* Fondo oscuro */
+    color: #ffd700; /* Texto dorado */
+    width: 250px;
+    height: 100vh; /* Altura completa de la ventana */
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ffd700; /* Texto dorado */
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #222; /* Fondo oscuro al pasar el ratón */
+}
+
+.wrapper {
+    display: flex;
+    margin-left: 250px; /* Ajustar contenido para dejar espacio para la barra lateral */
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1e1e1e; /* Fondo oscuro para el contenido principal */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    color: #ffd700; /* Letras doradas */
+}
+
+/* Títulos */
+h2 {
+    margin-top: 0;
+    color: #ffd700; /* Letras doradas */
+}
+
+/* Media Queries para Dispositivos Responsivos */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Sidebar ocupa todo el ancho en pantallas pequeñas */
+        height: auto;
+        position: relative; /* Sidebar se coloca debajo del header */
+        padding-top: 0;
+        background-color: #111;
+    }
+
+    .sidebar ul li {
+        padding: 8px; /* Reducir el padding para enlaces en móviles */
+    }
+
+    main {
+        margin-left: 0; /* Quita el margen izquierdo */
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Ajuste de tamaño del título en móviles */
+    }
+
+    .bienvenida {
+        font-size: 16px; /* Reducción del tamaño de texto de bienvenida */
+    }
+
+    header {
+        padding: 1.5rem 1rem; /* Reduce el padding del header */
+    }
+
+    .logo {
+        max-width: 100px; /* Tamaño reducido del logo para pantallas pequeñas */
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles verticales) */
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%; /* Sidebar 100% en móviles muy pequeños */
+        position: static; /* Sidebar no fija en pantallas muy pequeñas */
+        height: auto;
+    }
+
+    .sidebar ul li {
+        padding: 5px; /* Aún menos padding en móviles muy pequeños */
+    }
+
+    main {
+        padding: 1rem; /* Reduce el padding del contenido principal */
+        margin-left: 0;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Tamaño de título más pequeño */
+    }
+
+    .bienvenida {
+        font-size: 14px; /* Ajuste en la bienvenida */
+    }
+
+    header {
+        padding: 1rem 0.5rem; /* Menos espacio alrededor del header */
+    }
+
+    .logo {
+        max-width: 80px; /* Reducir más el tamaño del logo en móviles pequeños */
+    }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 220px; /* Sidebar más pequeña en tablets */
+    }
+
+    main {
+        margin-left: 220px; /* Ajusta el margen izquierdo en tablets */
+        padding: 1.5rem;
+    }
+
+    header .logo {
+        max-width: 120px; /* Tamaño reducido del logo en tablets */
+    }
+
+    h1 {
+        font-size: 2rem; /* Ajuste del tamaño de título en tablets */
+    }
+
+    .bienvenida {
+        font-size: 18px; /* Ajuste de la bienvenida en tablets */
+    }
+}
+
+/* Para pantallas grandes (portátiles) */
+@media (min-width: 1025px) {
+    .sidebar {
+        width: 150px; /* Sidebar grande en portátiles */
+    }
+
+    main {
+        margin-left: 250px; /* Mantiene el margen en portátiles */
+        padding: 2rem; /* Padding más grande para pantallas grandes */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Título más grande en portátiles */
+    }
+
+    .bienvenida {
+        font-size: 20px; /* Texto de bienvenida más grande */
+    }
+
+    header .logo {
+        max-width: 150px; /* Tamaño estándar del logo en portátiles */
+    }
+}
+
+/* Para pantallas de 1366x768 (notebooks) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .sidebar {
+        width: 200px; /* Sidebar más pequeño en pantallas de notebook */
+    }
+
+    main {
+        margin-left: 0px; /* Ajuste de margen para que el contenido sea visible */
+        padding: 1.5rem; /* Padding más pequeño en pantallas de notebook */
+    }
+
+    h1 {
+        font-size: 2rem; /* Título más grande pero acorde a la resolución */
+    }
+
+    .bienvenida {
+        font-size: 18px; /* Texto de bienvenida ligeramente más pequeño */
+    }
+
+    header .logo {
+        max-width: 120px; /* Reducción del tamaño del logo en pantallas más pequeñas */
+    }
+}
+
