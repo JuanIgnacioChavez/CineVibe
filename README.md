@@ -1,7 +1,9 @@
 CineVibe 🎥
+
 CineVibe es un sistema para cines desarrollado como parte de mi tesis en la carrera de Analista en Sistemas. Este proyecto combina funcionalidad y diseño para ofrecer una solución integral tanto para los administradores del cine como para los clientes.
 
 Características principales ✨
+
 Para Administradores
 CRUD completo:
 Gestión de películas, funciones y aperitivos de manera sencilla y eficiente.
